@@ -15,6 +15,7 @@
   --surface-color: rgba(15, 23, 42, 0.78);
   --text-muted-color: #cbd5f5;
   --contrast-color: #111827;
+  --table-color: #94a3b8;
 }
 
 /* Nav Menu Colors - used specifically for the navigation menu */
@@ -331,6 +332,13 @@ a:hover {
   visibility: visible;
 }
 
+.navmenu .dropdown ul a:before{
+  content: "▸";
+  position:absolute;
+
+  left:5px;
+}
+
 /* Scroll to Top Button */
 
 .scroll-top {
@@ -364,6 +372,67 @@ a:hover {
     bottom: 15px;
   }
 
+/* Service Table */
+
+.service-table {
+  margin: 20px;
+  border-collapse: separate;
+  border-spacing: 0;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.service-table th,
+.service-table td {
+  border: 1px solid rgb(31, 43, 74);
+  padding: 12px;
+  text-align: center;
+  border-radius: 0;
+}
+
+.service-table thead th {
+  background-color: var(--accent-color);
+  color: var(--contrast-color);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.service-table tbody tr {
+  background-color: var(--default-color);
+  color: var(--contrast-color);
+}
+
+.service-table tbody tr:hover {
+  color: color-mix(in srgb, var(--default-color), transparent 25%);
+  color: color-mix(in srgb, var(--contrast-color), transparent 25%);
+}
+
+.service-table tbody tr:nth-child(even) {
+  background-color: #94a3b8;
+  color: var(--contrast-color);
+}
+
+.service-table tbody tr:nth-child(even):hover {
+  color: color-mix(in srgb, var(--table-color), transparent 25%);
+  color: color-mix(in srgb, var(--contrast-color), transparent 25%);
+}
+
+.service-table thead th:first-child {
+  border-top-left-radius: 14px;
+}
+
+.service-table thead th:last-child {
+  border-top-right-radius: 14px;
+}
+
+.service-table tbody tr:last-child td:first-child {
+  border-bottom-left-radius: 14px;
+}
+
+.service-table tbody tr:last-child td:last-child {
+  border-bottom-right-radius: 14px;
+}
 /*--------------------------------------------------------------
 # Global Footer
 --------------------------------------------------------------*/
@@ -412,7 +481,7 @@ a:hover {
 }
 
 .footer .social-links a:hover {
-  background: color-mix(in srgb, var(--accent-color), transparent 20%);
+  background: var(--accent-color);
   text-decoration: none;
   transform: translateY(-4px) scale(1.25);
 }
