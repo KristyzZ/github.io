@@ -125,7 +125,75 @@ section {
   padding-bottom: 80px;
 }
 
-.about .container,
+/* Animated CSS Shapes in About Section */
+.about {
+  position: relative;
+  overflow: hidden;
+}
+
+.about::before {
+  content: "";
+  position: absolute;
+  width: 90px;
+  height: 90px;
+  top: 80px;
+  right: 8%;
+  border: 3px solid var(--accent-color);
+  border-radius: 50%;
+  opacity: 0.45;
+  animation: floatingShape 6s ease-in-out infinite;
+}
+
+.about::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 0;
+  bottom: 70px;
+  left: 7%;
+  border-left: 45px solid transparent;
+  border-right: 45px solid transparent;
+  border-bottom: 80px solid rgba(59, 130, 246, 0.35);
+  opacity: 0.6;
+  animation: rotatingShape 8s linear infinite;
+}
+
+.about .container {
+  position: relative;
+  z-index: 1;
+}
+
+.about .container::before {
+  content: "";
+  position: absolute;
+  width: 55px;
+  height: 55px;
+  top: -50px;
+  left: 25%;
+  background: rgba(255, 216, 41, 0.22);
+  border-radius: 12px;
+  animation: scalingShape 4s ease-in-out infinite;
+  z-index: -1;
+}
+
+@keyframes floatingShape {
+  50% {
+    transform: translateY(-28px);
+  }
+}
+
+@keyframes rotatingShape {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes scalingShape {
+  50% {
+    transform: scale(1.35);
+  }
+}
+
 .resume .container,
 .portfolio .container {
   display: flex;
@@ -369,6 +437,40 @@ a:hover {
   position:absolute;
 
   left:5px;
+}
+
+/* About */
+
+
+
+/* Services */
+
+.services {
+  position: relative;
+  overflow: hidden;
+  background: linear-gradient(
+    -45deg,
+    #020617,
+    #0f172a,
+    #1e3a8a,
+    #312e81
+  );
+  background-size: 400% 400%;
+  animation: gradientMove 12s ease infinite;
+}
+
+@keyframes gradientMove {
+  0% {
+    background-position: 0% 50%;
+  }
+
+  50% {
+    background-position: 100% 50%;
+  }
+
+  100% {
+    background-position: 0% 50%;
+  }
 }
 
 /* Scroll to Top Button */
@@ -626,4 +728,10 @@ a:hover {
     transition: none !important;
   }
 
+  .about::before,
+  .about::after,
+  .about .container::before,
+  .services {
+    animation: none;
+  }
 }
