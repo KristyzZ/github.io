@@ -93,7 +93,7 @@
           <div class="row d-flex justify-content-center text-center">
             <div class="col-lg-8">
               <h1>Contact</h1>
-              <p class="mb-0">Odio et unde deleniti. Deserunt numquam exercitationem. Officiis quo odio sint voluptas consequatur ut a odio voluptatem. Sit dolorum debitis veritatis natus dolores. Quasi ratione sint. Sit quaerat ipsum dolorem.</p>
+              <p class="mb-0">Hey</p>
             </div>
           </div>
         </div>
@@ -167,38 +167,38 @@
           <div class="row gy-4">
 
             <div class="col-md-6">
-              <input type="text" name="name" class="form-control" placeholder="Vardas" required>
+              <input id="form-name" type="text" name="name" class="form-control" placeholder="Vardas" required>
             </div>
 
             <div class="col-md-6">
-              <input type="text" name="surname" class="form-control" placeholder="Pavardė" required>
+              <input id="form-surname" type="text" name="surname" class="form-control" placeholder="Pavardė" required>
             </div>
 
             <div class="col-md-6">
-              <input type="email" class="form-control" name="email" placeholder="El. paštas" required>
+              <input id="form-email" type="email" class="form-control" name="email" placeholder="El. paštas" required>
             </div>
 
             <div class="col-md-6">
-              <input type="text" class="form-control" name="phone" placeholder="Telefono numeris" required>
+              <input id="form-phone" type="text" class="form-control" name="phone" placeholder="Telefono numeris" required>
             </div>
 
             <div class="col-md-6">
-              <input type="text" class="form-control" name="address" placeholder="Adresas" required>
+              <input id="form-address" type="text" class="form-control" name="address" placeholder="Adresas" required>
             </div>
 
             <div class="col-md-12">
               <label class="form-label">1. Kaip vertinate svetainės dizainą? (0-10)</label>
-              <input type="range" class="form-range" name="design_rating" min="0" max="10" value="5">
+              <input type="range" class="form-range" id="design_rating" min="0" max="10" value="5">
             </div>
 
             <div class="col-md-12">
               <label class="form-label">2. Kaip vertinate naudojimo patogumą? (0-10)</label>
-              <input type="range" class="form-range" name="usability_rating" min="0" max="10" value="5">
+              <input type="range" class="form-range" id="usability_rating" min="0" max="10" value="5">
             </div>
 
             <div class="col-md-12">
               <label class="form-label">3. Ar rekomenduotumėte šią svetainę? (0-10)</label>
-              <input type="range" class="form-range" name="recommend_rating" min="0" max="10" value="5">
+              <input type="range" class="form-range" id="recommend_rating" min="0" max="10" value="5">
             </div>
 
 
@@ -207,7 +207,11 @@
               <div class="error-message"></div>
               <div class="sent-message">Your message has been sent. Thank you!</div>
 
-              <button type="submit">Submit</button>
+               <button id="submit" type="submit">Submit</button>
+
+              <div class="col-md-12" id="form-result-title">
+                <div id="form-result" class="mt-4"></div>
+              </div>
             </div>
           </div>
         </form><!-- End Contact Form -->
@@ -235,9 +239,9 @@
         </div>
         <div class="credits">
           <!-- All the links in the footer should remain intact. -->
-          <!-- You can delete the links only if you've purchased the pro version. -->
+          <!-- You can delete the links only if you've purchased the pro-version. -->
           <!-- Licensing information: https://bootstrapmade.com/license/ -->
-          <!-- Purchase the pro version with working PHP/AJAX contact form: [buy-url] -->
+          <!-- Purchase the pro-version with working PHP/AJAX contact form: [buy-url] -->
           Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a> | <a href="https://bootstrapmade.com/tools/">DevTools</a>
         </div>
       </div>
@@ -249,6 +253,14 @@
 
   <!-- Preloader -->
   <div id="preloader"></div>
+
+  <div id="success-popup" class="success-popup">
+    <div class="success-popup-content">
+      <button id="success-popup-close" class="success-popup-close" type="button">&times;</button>
+      <h4>Duomenys pateikti sėkmingai!</h4>
+      <p>Ačiū, jūsų forma buvo sėkmingai pateikta.</p>
+    </div>
+  </div>
 
   <!-- Vendor JS Files -->
   <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
@@ -264,6 +276,7 @@
 
   <!-- Main JS File -->
   <script src="assets/js/main.js"></script>
+  <script src="assets/js/custom.js"></script>
 
 </body>
 
