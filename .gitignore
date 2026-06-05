@@ -1,0 +1,17 @@
+# macOS
+.DS_Store
+
+# JetBrains IDEs
+.idea/
+
+# Qodana
+qodana.yaml
+
+# Temporary or backup files
+index_7.html
+.output.txt
+
+# Web dependencies and build outputs
+node_modules/
+dist/
+build/
