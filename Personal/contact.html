@@ -220,6 +220,48 @@
 
     </section><!-- /Contact Section -->
 
+    <section id="game-section" class="game-section section">
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+        <div class="text-center mb-4">
+          <h2>Mano Žaidimas</h2>
+          <p>Atminties žaidimas: raskite visas vienodas kortelių poras.</p>
+        </div>
+
+        <div class="game-panel">
+          <div class="game-controls">
+            <div class="difficulty-box">
+              <label for="difficulty">Pasirinkite žaidimo sunkumą:</label>
+              <select id="difficulty" class="form-select">
+                <option value="easy">Lengvas (4×3)</option>
+                <option value="hard">Sunkus (6×4)</option>
+              </select>
+            </div>
+
+            <div class="game-buttons">
+              <button id="start-game" class="btn game-btn" type="button">Start</button>
+              <button id="restart-game" class="btn game-btn" type="button">Atnaujinti</button>
+            </div>
+          </div>
+
+          <div class="game-content">
+            <div id="game-board" class="game-board"></div>
+
+            <div class="game-stats">
+              <h3>Statistika</h3>
+              <p>Laikas: <span id="timer-count">0</span> s</p>
+              <p>Ėjimų skaičius: <span id="moves-count">0</span></p>
+              <p>Sutapusios poros: <span id="matched-count">0</span></p>
+              <hr>
+              <p>Geriausias lengvas: <span id="best-easy">-</span></p>
+              <p>Geriausias sunkus: <span id="best-hard">-</span></p>
+              <div id="win-message" class="win-message"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
   </main>
 
   <footer id="footer" class="footer dark-background">
@@ -261,6 +303,8 @@
       <p>Ačiū, jūsų forma buvo sėkmingai pateikta.</p>
     </div>
   </div>
+
+
 
   <!-- Vendor JS Files -->
   <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
