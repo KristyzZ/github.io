@@ -77,7 +77,6 @@ h2 {
   color: var(--accent-color);
   font-weight: 700;
   line-height: 1.25;
-  /*border-left: 4px solid var(--secondary-accent-color);*/
   padding-left: 10px;
 }
 

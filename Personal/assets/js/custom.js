@@ -14,7 +14,7 @@ const successPopup = document.getElementById("success-popup");
 const successPopupClose = document.getElementById("success-popup-close");
 const contactForm = document.getElementById("contact-form");
 // Submit form
-function submitForm(event){
+function submitForm(event) {
     event.preventDefault();
 
     if (!validate() || !validatePhoneField(phoneInput)) {
