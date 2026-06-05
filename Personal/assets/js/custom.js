@@ -12,6 +12,7 @@ const resultBlock = document.getElementById("form-result");
 const border = document.getElementById("form-result-title");
 const successPopup = document.getElementById("success-popup");
 const successPopupClose = document.getElementById("success-popup-close");
+const contactForm = document.getElementById("contact-form");
 // Submit form
 function submitForm(event){
     event.preventDefault();
@@ -20,6 +21,8 @@ function submitForm(event){
         event.target.form.reportValidity();
         return;
     }
+
+
 
     console.log(nameInput.value);
     console.log(surnameInput.value);
@@ -35,15 +38,12 @@ function submitForm(event){
         <p><strong>Tel. numeris:</strong> ${phoneInput.value}</p>
         <p><strong>Adresas:</strong> ${addressInput.value}</p>`;
 
+    contactForm.reset();
     showSuccessPopup();
 }
 
 function showSuccessPopup() {
     successPopup.classList.add("show");
-
-    setTimeout(function () {
-        successPopup.classList.remove("show");
-    }, 3000);
 }
 
 successPopupClose.addEventListener("click", function () {

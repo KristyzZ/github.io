@@ -904,7 +904,7 @@ input[type="range"].form-range::-moz-range-thumb:hover {
   width: calc(100% - 32px);
   padding: 28px;
   border-radius: 18px;
-  background: #18d26e;
+  background: #1b7846;
   color: #ffffff;
   text-align: center;
   box-shadow: 0 20px 60px rgba(0, 0, 0, 0.35);
