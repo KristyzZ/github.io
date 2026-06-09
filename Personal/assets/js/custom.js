@@ -215,8 +215,6 @@ submitButton.addEventListener("click", submitForm);
 
 //game logic
 
-// Kortelių duomenų rinkinys
-// Pakeisk failų pavadinimus pagal tai, kaip jie realiai vadinasi tavo assets/img/game aplanke.
 const cardImages = [
     "assets/img/game/card1.png",
     "assets/img/game/card2.png",
